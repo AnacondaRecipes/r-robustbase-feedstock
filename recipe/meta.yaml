@@ -36,11 +36,13 @@ requirements:
   host:
     - r-base
     - r-deoptimr
+    - libopenblas                # [osx]
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-deoptimr
+    - libopenblas                # [osx]
 
 test:
   commands:
