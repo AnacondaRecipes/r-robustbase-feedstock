@@ -1,4 +1,4 @@
-{% set version = '0.93-2' %}
+{% set version = '0.93-4' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/robustbase_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/robustbase/robustbase_{{ version }}.tar.gz
-  sha256: 27b282ef2c91274f6d88ba0cea468d1078c5d37639cdb141c538a61dc7b96298
+  sha256: ea9e03d484ef52ea805803477ffc48881e4c8c86ffda4eea56109f8b23f0a6e0
 
 build:
   merge_build_host: True  # [win]
@@ -65,6 +65,7 @@ about:
     Martin and Yohai''; Wiley 2006.'
 
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
@@ -75,11 +76,11 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: robustbase
-# Version: 0.93-2
-# VersionNote: Released 0.93-1.1 on 2018-07-18 on CRAN
-# Date: 2018-07-26
+# Version: 0.93-4
+# VersionNote: Released 0.93-3 on 2018-09-06 on CRAN
+# Date: 2019-03-18
 # Title: Basic Robust Statistics
-# Authors@R: c(person("Martin","Maechler", role=c("aut","cre"), email="maechler@stat.math.ethz.ch") , person("Peter", "Rousseeuw", role="ctb", comment = "Qn and Sn") , person("Christophe", "Croux", role="ctb", comment = "Qn and Sn") , person("Valentin", "Todorov", role = "aut", email = "valentin.todorov@chello.at", comment = "most robust Cov") , person("Andreas", "Ruckstuhl", role = "aut", email = "andreas.ruckstuhl@zhaw.ch", comment = "nlrob, anova, glmrob") , person("Matias", "Salibian-Barrera", role = "aut", email = "matias@stat.ubc.ca", comment = "lmrob orig.") , person("Tobias", "Verbeke", role = c("ctb","fnd"), email = "tobias.verbeke@openanalytics.eu", comment = "mc, adjbox") , person("Manuel", "Koller", role = "aut", email = "koller.manuel@gmail.com", comment = "mc, lmrob, psi-func.") , person(c("Eduardo", "L. T."), "Conceicao", role = "aut", email = "mail@eduardoconceicao.org", comment = "MM-, tau-, CM-, and MTL- nlrob") , person("Maria", "Anna di Palma", role = "ctb", comment = "initial version of Comedian") )
+# Authors@R: c(person("Martin","Maechler", role=c("aut","cre"), email="maechler@stat.math.ethz.ch", comment = c(ORCID = "0000-0002-8685-9910")) , person("Peter", "Rousseeuw", role="ctb", comment = "Qn and Sn") , person("Christophe", "Croux", role="ctb", comment = "Qn and Sn") , person("Valentin", "Todorov", role = "aut", email = "valentin.todorov@chello.at", comment = "most robust Cov") , person("Andreas", "Ruckstuhl", role = "aut", email = "andreas.ruckstuhl@zhaw.ch", comment = "nlrob, anova, glmrob") , person("Matias", "Salibian-Barrera", role = "aut", email = "matias@stat.ubc.ca", comment = "lmrob orig.") , person("Tobias", "Verbeke", role = c("ctb","fnd"), email = "tobias.verbeke@openanalytics.eu", comment = "mc, adjbox") , person("Manuel", "Koller", role = "aut", email = "koller.manuel@gmail.com", comment = "mc, lmrob, psi-func.") , person(c("Eduardo", "L. T."), "Conceicao", role = "aut", email = "mail@eduardoconceicao.org", comment = "MM-, tau-, CM-, and MTL- nlrob") , person("Maria", "Anna di Palma", role = "ctb", comment = "initial version of Comedian") )
 # URL: http://robustbase.r-forge.r-project.org/
 # Description: "Essential" Robust Statistics. Tools allowing to analyze data with robust methods.  This includes regression methodology including model selections and multivariate statistics where we strive to cover the book "Robust Statistics, Theory and Methods" by 'Maronna, Martin and Yohai'; Wiley 2006.
 # Depends: R (>= 3.1.0)
@@ -90,11 +91,11 @@ extra:
 # LazyData: yes
 # NeedsCompilation: yes
 # License: GPL (>= 2)
-# Packaged: 2018-07-27 07:28:53 UTC; maechler
-# Author: Martin Maechler [aut, cre], Peter Rousseeuw [ctb] (Qn and Sn), Christophe Croux [ctb] (Qn and Sn), Valentin Todorov [aut] (most robust Cov), Andreas Ruckstuhl [aut] (nlrob, anova, glmrob), Matias Salibian-Barrera [aut] (lmrob orig.), Tobias Verbeke [ctb, fnd] (mc, adjbox), Manuel Koller [aut] (mc, lmrob, psi-func.), Eduardo L. T. Conceicao [aut] (MM-, tau-, CM-, and MTL- nlrob), Maria Anna di Palma [ctb] (initial version of Comedian)
+# Packaged: 2019-03-18 14:21:25 UTC; maechler
+# Author: Martin Maechler [aut, cre] (<https://orcid.org/0000-0002-8685-9910>), Peter Rousseeuw [ctb] (Qn and Sn), Christophe Croux [ctb] (Qn and Sn), Valentin Todorov [aut] (most robust Cov), Andreas Ruckstuhl [aut] (nlrob, anova, glmrob), Matias Salibian-Barrera [aut] (lmrob orig.), Tobias Verbeke [ctb, fnd] (mc, adjbox), Manuel Koller [aut] (mc, lmrob, psi-func.), Eduardo L. T. Conceicao [aut] (MM-, tau-, CM-, and MTL- nlrob), Maria Anna di Palma [ctb] (initial version of Comedian)
 # Maintainer: Martin Maechler <maechler@stat.math.ethz.ch>
 # Repository: CRAN
-# Date/Publication: 2018-07-27 17:00:03 UTC
+# Date/Publication: 2019-03-19 11:40:03 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
